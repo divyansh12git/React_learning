@@ -17,8 +17,9 @@ export default function TextForm(props){
         settext("")
     }
     let [namer,setname]=useState("enter your name")
+    let count=0;
     const store=(ice)=>{
-        setname(ice.target.value)
+            setname(ice.target.value);
     }
     const proceed=(event)=>{
         setname=("")
@@ -28,7 +29,7 @@ export default function TextForm(props){
     <>
     <div>
         <h1 style={{color:props.mode==="dark"?"red":"black"}}>{props.heading}+fdfdf</h1>
-        <textarea className="form-control"  value={text} onChange={handleOnChange} row="8" style={{backgroundColor: props.mode==="dark"?"grey":"white",color:props.mode==="dark"?"grey":"white"}}> 
+        <textarea className="form-control"  value={text} onChange={handleOnChange} row="8" style={{backgroundColor: props.mode==="dark"?"grey":"white",color:props.mode==="dark"?"white":"black"}}> 
         </textarea>
     </div>
     <button className="btn btn-primary" onClick={handleUpClick}>Convert To Upper Case</button>
