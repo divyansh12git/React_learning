@@ -3,14 +3,13 @@ import NaviBar from './components/Nav_bar';
 import TextForm from './components/textform';
 import React,{useState} from 'react';
 import Alert from './components/alert'
-import About from "./components/about"
-import {
+/*import {
   BrowserRouter as Router,
   Switch,
   Routes,
   Route,
   Link
-} from "react-router-dom";
+} from "react-router-dom"; */
 
 function App() {
   const [mode,setMode]=useState('light');
@@ -29,16 +28,11 @@ function App() {
   }
   return (
     <>
-     <Router>
+    
     <NaviBar title="Divyansh Gupta" AboutText="About" mode={mode} toggleMode={toggleMode} /> 
+    <TextForm mode={mode} toggleMode={toggleMode} />
+    
    
-      <Routes>
-          <Route exact path="/about" element={<About />} >
-          </Route>
-          <Route exact path="/" element={<TextForm mode={mode} toggleMode={toggleMode} />} >
-          </Route>
-      </Routes>
-    </Router>
     
     
   </>
